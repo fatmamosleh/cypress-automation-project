@@ -1,11 +1,17 @@
 {
   "name": "cypress-automation-project",
   "version": "1.0.0",
+  "private": true,
+  "description": "Cypress end-to-end test automation portfolio for SauceDemo",
   "scripts": {
-    "open": "cypress open",
-    "test": "cypress run"
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "test:smoke": "cypress run --spec \"cypress/e2e/smoke/**/*.cy.js\"",
+    "test:regression": "cypress run --spec \"cypress/e2e/regression/**/*.cy.js\"",
+    "test:e2e": "cypress run --spec \"cypress/e2e/journeys/**/*.cy.js\"",
+    "verify": "cypress verify"
   },
   "devDependencies": {
-    "cypress": "^9.7.0"
+    "cypress": "16.0.0"
   }
 }
